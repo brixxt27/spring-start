@@ -39,7 +39,7 @@ public class HelloController {
         private String name;
 
         // cmd + n 에서 getter, setter 추가를 쉽게 할 수 있다.
-        public String getName() {
+        public String getName() { // getter 가 없으면 해당 프로퍼티에 HttpMessageConverter 가 접근할 수 없다.
             return name;
         }
 
