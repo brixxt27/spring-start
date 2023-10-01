@@ -8,8 +8,13 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
     // final 은 한 번 할당 되면 더이상 변경 되지 않는다는 의미이다.
+    private final MemberRepository memberRepository;
+
+    // DI, 의존성 주입
+    public MemberService(MemberRepository repository) {
+        this.memberRepository = repository;
+    }
 
     /**
      * 회원가입
