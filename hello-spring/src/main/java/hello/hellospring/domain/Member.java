@@ -4,6 +4,12 @@ public class Member {
     private Long id;
     private String name;
 
+    public Member() {}
+
+    public Member(final String name) {
+        this.setName(name);
+    }
+
     public Long getId() {
         return id;
     }
