@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    // final 은 한 번 할당 되면 더이상 변경 되지 않는다는 의미이다.
+    // final 은 한 번 할당 되면 더이상 변경되지 않는다는 의미이다.
     private final MemberRepository memberRepository;
 
     // DI, 의존성 주입

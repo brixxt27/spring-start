@@ -22,8 +22,11 @@ class MemberServiceTest {
     private final MemberService memberService = new MemberService();
     MemoryMemberRepository memberRepository = new MemoryMemberRepository();
 */
-    MemoryMemberRepository memberRepository;
-    MemberService memberService;
+
+//    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
+//    MemberService memberService = new MemberService(memberRepository);
+    private MemoryMemberRepository memberRepository;
+    private MemberService memberService;
 
     @BeforeEach
     public void beforeEach() {
@@ -31,13 +34,11 @@ class MemberServiceTest {
         memberService = new MemberService(memberRepository);
     }
 
-//    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
-//    MemberService memberService = new MemberService(memberRepository);
-
     @AfterEach
     void afterEach() {
         memberRepository.clearStore();
     }
+
     @Test
     void 회원가입() {
         // given
