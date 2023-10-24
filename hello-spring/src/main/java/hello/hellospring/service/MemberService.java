@@ -3,15 +3,19 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+//@Service
 public class MemberService {
     // final 은 한 번 할당 되면 더이상 변경되지 않는다는 의미이다.
     private final MemberRepository memberRepository;
 
     // DI, 의존성 주입
+//    @Autowired
     public MemberService(MemberRepository repository) {
         this.memberRepository = repository;
     }

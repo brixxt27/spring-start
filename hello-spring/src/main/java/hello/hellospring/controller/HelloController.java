@@ -21,7 +21,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
-    @ResponseBody
+    @ResponseBody // HTTP 응답 메시지의 body에 값을 넣어 반환
     public String helloString(@RequestParam("name") String name) {
         return "HTTP Body: hello " + name;
     }
@@ -35,7 +35,7 @@ public class HelloController {
         return hello;
     }
 
-    static class Hello { // java bin 표준 방식(getter, setter), 프로퍼티 접근 방식
+    static class Hello { // java bean 표준 방식(getter, setter), 프로퍼티 접근 방식
         private String name;
 
         // cmd + n 에서 getter, setter 추가를 쉽게 할 수 있다.
