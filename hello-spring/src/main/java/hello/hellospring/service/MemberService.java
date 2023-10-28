@@ -15,7 +15,7 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     // DI, 의존성 주입
-//    @Autowired
+//    @Autowired // Component 스캔 방식을 사용하면 꼭 이 방식으로 의존성을 해결해야 한다.
     public MemberService(MemberRepository repository) {
         this.memberRepository = repository;
     }
