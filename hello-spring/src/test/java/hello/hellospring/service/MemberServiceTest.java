@@ -24,13 +24,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Transactional // 테스트는 반복적으로 할 수 있어야 한다. Transaction 을 생성하여 이를 DB에 반영하지 않고 롤백 시킨다.
 class MemberServiceTest {
 
-/*
-    private final MemberService memberService = new MemberService();
-    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
-*/
-
-//    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
-//    MemberService memberService = new MemberService(memberRepository);
     @Autowired private MemberRepository memberRepository;
     @Autowired private MemberService memberService;
 
